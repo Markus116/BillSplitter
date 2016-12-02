@@ -12,24 +12,25 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<script src="js/app.js"></script>
-	<script src="js/constrollers/restrauntsController.js"></script>
+	<script src="js/factories/Restraunt.js"></script>
+	<script src="js/factories/Dish.js"></script>
+	<script src="js/factories/Client.js"></script>
+	<script src="js/factories/ClientsFactory.js"></script>
+
+	<script src="js/constrollers/RestrauntsController.js"></script>
+	<script src="js/constrollers/OrdersController.js"></script>
+	<script src="js/constrollers/OrderController.js"></script>
+	<script src="js/constrollers/BillController.js"></script>
+
 </head>
 <body>
 <div class="main-container">
 	<header>
 		<img src="images/mimenulogo.png"/>
 	</header>
-	<div class="app-body">
-		<div class="mi-button-group">
-			<div class="mi-button">
-				Create order
-			</div>
-			<div class="mi-button">
-				Create order
-			</div>
-		</div>
-	</div>
-	<div ng-view style="background-color: burlywood"></div>
+
+	<div ng-view class="app-body"></div>
+
 	<footer>Mimenu team corp</footer>
 </div>
 </body>

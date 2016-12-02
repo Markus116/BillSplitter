@@ -1,0 +1,12 @@
+<div>
+	{{model.orderId}}
+	<div ng-repeat="dish in model.selectedRestraunt.menu.dishes">
+		<span>{{dish.name}} : {{dish.price}}грн </span>
+		<input type="checkbox" ng-model="selected" onchange="updateDishCount(dish,selected)">
+		<input type="number" min="1"
+			   onchange="updateDishCount(dish,dishCount)"
+			   ng-model="dishCount" ng-show="selected">
+	</div>
+
+	<button ng-click="approveOrder()">Approve</button>
+</div>

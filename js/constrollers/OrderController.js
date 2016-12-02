@@ -1,12 +1,13 @@
 angular.module("billApp")
-    .controller('OrderController', function ($scope, ClientsFactory) {
+    .controller('OrderController', function ($scope, $routeParams, ClientsFactory) {
         $scope.model = ClientsFactory;
+        $scope.model.orderId = $routeParams.order;
 
-        $scope.createNewOrder = function(){
+        $scope.approveOrder = function(){
+            console.log("approve order");
+        }
 
-        };
-
-        $scope.connectToOrder = function(id){
-
+        $scope.updateDishCount = function(dish,count){
+            dish.count = count;
         }
     });

@@ -1,6 +1,14 @@
 <div>
-	<h2>{{model.selectedRestraunt.name}}</h2>
-	<hr>
-	<button style="display: block"> Create new Order</button>
-	<button style="display: block"> Connect to Order</button>
+	<h1>{{model.selectedRestraunt.name}}</h1>
+	<div class="mi-button-group">
+		<div class="mi-button" ng-click="createNewOrder()">
+			Create new Order
+		</div>
+		<div class="mi-button" ng-click="connectToOrder(model.orderId)">
+			Connect to Order
+		</div>
+	</div>
+	<!--<button style="display: block" ng-click="createNewOrder()"> Create new Order</button>
+	&lt;!&ndash;<input type="text" ng-model="model.orderId">&ndash;&gt;
+	<button style="display: block" ng-click="connectToOrder(model.orderId)"> Connect to Order</button>-->
 </div>
