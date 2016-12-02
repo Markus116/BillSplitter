@@ -6,7 +6,11 @@ app.config(function ($routeProvider) {
             controller: 'RestrauntsController',
             templateUrl: 'views/restraunts.html'
         })
-        .when("/order",{
+        .when("/orders",{
+            controller: 'BillController',
+            templateUrl: 'views/orders.html'
+        })
+        .when ('/order:id',{
             controller: 'BillController',
             templateUrl: 'views/order.html'
         })
