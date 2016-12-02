@@ -291,16 +291,17 @@ body {
 .main-container header {
     min-height: 10%;
     display: block;
-    border: 20px solid white;
+    border: 20px solid #36b9d4;
     border-left-width: 0px;
     border-right-width: 0px;
-    padding: 1rem;
+    background: white;
+    padding: 1.5rem;
     margin: 3rem auto;
 }
 
 .main-container footer {
     position: absolute;
-    bottom: 1rem;
+    bottom: 0rem;
     right: 1rem;
 }
 
@@ -333,4 +334,49 @@ body {
 
 .mi-button:hover {
     background: rgb(230, 230, 230);
+}
+
+.ribbon {
+    font-size: 3rem !important;
+    width: 100%;
+
+    position: relative;
+    background: #bf0000;
+    color: #fff;
+    text-align: center;
+    padding: 1em 2em;
+}
+.ribbon:before, .ribbon:after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -1em;
+    border: 1.5em solid #bf0000;
+    z-index: -1;
+}
+.ribbon:before {
+    left: -2em;
+    border-right-width: 1.5em;
+    border-left-color: transparent;
+}
+.ribbon:after {
+    right: -2em;
+    border-left-width: 1.5em;
+    border-right-color: transparent;
+}
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: #691818 transparent transparent transparent;
+    bottom: -1em;
+}
+.ribbon .ribbon-content:before {
+    left: 0;
+    border-width: 1em 0 0 1em;
+}
+.ribbon .ribbon-content:after {
+    right: 0;
+    border-width: 1em 1em 0 0;
 }
