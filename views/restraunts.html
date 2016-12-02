@@ -1,0 +1,6 @@
+<h2>Choose restraunt</h2>
+
+<div ng-repeat="restraunt in model.restraunts"
+	ng-click="setSelectedRestraunt(restraunt)">
+	<a href="#order">{{restraunt.name}}</a>
+</div>

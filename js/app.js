@@ -1,15 +1,21 @@
 var app = angular.module('billApp', ['ngRoute']);
 
 app.config(function ($routeProvider) {
-    var routeConfig = {
-        controller: 'BillController',
-        templateUrl: 'views/bill.html'
-    };
-
     $routeProvider
-        .when('/bill', routeConfig)
+        .when("/restraunts",{
+            controller: 'RestrauntsController',
+            templateUrl: 'views/restraunts.html'
+        })
+        .when("/order",{
+            controller: 'BillController',
+            templateUrl: 'views/order.html'
+        })
+        .when('/bill', {
+            controller: 'BillController',
+            templateUrl: 'views/bill.html'
+        })
         .otherwise({
-            redirectTo: '/bill'
+            redirectTo: '/restraunts'
         });
 });
 
@@ -31,10 +37,6 @@ app.controller('BillController', function ($scope, ClientsFactory, Dish, Client,
 
     $scope.removeClient = function (client) {
         ClientsFactory.removeClient(client);
-    };
-
-    $scope.setSelectedRestraunt = function(rest){
-        ClientsFactory.setSelectedRestraunt(rest);
     };
 
     $scope.removeDish = function (client,dish) {
