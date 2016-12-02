@@ -1,0 +1,63 @@
+<h1>General bill</h1>
+<div class="container">
+	<div class="row" >
+		<div class="col-sm-4" style="background-color: aquamarine">
+			<hr>
+			<div class="dropdown">
+				<button class="btn btn-default dropdown-toggle"
+						type="button" id="menu1" data-toggle="dropdown">{{model.selectedRestraunt.name || 'Choose' }}
+					<span class="caret"></span></button>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+					<li ng-repeat="rest in model.restraunts" ng-click="setSelectedRestraunt(rest)">
+						<a href="#">{{rest.name}}</a>
+					</li>
+				</ul>
+			</div>
+
+			<hr>
+
+			<span>
+				<input type="text" ng-model="model.newClient" ng-model-options="{getterSetter: true}">
+				<button ng-disabled="model.newClient == ''"  ng-click="addClient()">Add Client</button>
+			</span>
+
+			<div ng-show="model.selectedRestraunt != undefined">
+				Menu
+				<ul ng-repeat="dish in model.selectedRestraunt.menu.dishes">
+					<span>{{dish.name}} : {{dish.price || 1}}</span>
+				</ul>
+			</div>
+
+		</div>
+		<div class="col-sm-8" style="background-color: bisque">
+			<ul ng-repeat="client in model.clients">
+				<li>
+					<div>
+						<label>{{client.name}}</label>
+						<button ng-click="removeClient(client)">Remove Client</button>
+					</div>
+					<div ng-repeat="dish in client.dishes">
+						<span>{{dish.name}}</span>
+						<button ng-click="removeDish(client, dish)">Remove</button>
+					</div>
+
+					<div class="dropdown">
+						<button class="btn btn-default dropdown-toggle"
+								type="button" id="menu2" data-toggle="dropdown">Choose
+							<span class="caret"></span></button>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="menu2">
+							<li ng-repeat="dish in model.selectedRestraunt.menu.dishes">
+								<a href="#" >{{dish.name}} : {{dish.price}}</a>
+							</li>
+						</ul>
+					</div>
+
+					<button ng-click="addDish()">Add Dish</button>
+					<span ng-show="client.dishes.length != 0">Total: {{client.total}}</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
