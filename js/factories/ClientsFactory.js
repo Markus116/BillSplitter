@@ -2,11 +2,13 @@ angular.module('billApp')
     .factory("ClientsFactory", function (Dish,Client,Restraunt) {
         var factory = {};
         //clients
-        factory.newClient="";
         factory.orderId = 0;
-        factory.clients = [];
+        var clientId = parseInt(Math.random()*10000);
 
-        factory.addClient = function () {
+
+        factory.currentClient = new Client(clientId,"User"+clientId);
+
+        /*factory.addClient = function () {
             //var client = {name:this.newClient, dishes:[], selectedDish:undefined};
             var client = new Client(this.clients.length+1, this.newClient);
             this.clients.push(client);
@@ -15,7 +17,7 @@ angular.module('billApp')
 
         factory.removeClient = function (client) {
             return removeItem(this.clients,client);
-        };
+        };*/
         //clients
 
 
@@ -30,10 +32,6 @@ angular.module('billApp')
         factory.setSelectedRestraunt = function(rest){
             if(factory.selectedRestraunt == undefined || factory.selectedRestraunt.id != rest.id){
                 factory.selectedRestraunt = rest;
-                //reset dishes
-                this.clients.forEach(function(obj){
-                    obj.dishes.length = 0;
-                });
             }
         };
         //restraunts

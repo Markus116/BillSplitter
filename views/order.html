@@ -1,12 +1,22 @@
 <div>
 	{{model.orderId}}
-	<div ng-repeat="dish in model.selectedRestraunt.menu.dishes">
+
+	<h1 class="ribbon">
+		<strong class="ribbon-content">Main Dishes</strong>
+	</h1>
+	<span ng-repeat="dish in model.selectedRestraunt.menu.dishes"
+		ng-click="addClientDish(dish)">{{dish.name}} : {{dish.price}}<br/></span>
+
+	<h1 class="ribbon">
+		<strong class="ribbon-content">Selected dishes</strong>
+	</h1>
+	<div ng-repeat="dish in model.currentClient.order.dishes">
 		<span>{{dish.name}} : {{dish.price}}грн </span>
-		<input type="checkbox" ng-model="selected" onchange="updateDishCount(dish,selected)">
-		<input type="number" min="1"
-			   onchange="updateDishCount(dish,dishCount)"
-			   ng-model="dishCount" ng-show="selected">
+		<button ng-click="removeClientDish(dish)">Remove</button>
 	</div>
 
-	<button ng-click="approveOrder()">Approve</button>
+	<hr>
+
+	Total : {{model.currentClient.order.total}}
+	<button class="mi-button" ng-click="approveOrder()">Approve</button>
 </div>
