@@ -607,3 +607,19 @@ body {
     width: 180rem;
     height: 100px;
 }
+
+.selected-by-user {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    background: rgb(54, 185, 212);
+    border-radius: 3rem;
+}
+
+.selected-by-user-ul {
+    position: relative;
+}
+
+.selected-by-user-ul>li {
+    padding-right:3rem;
+}
