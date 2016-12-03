@@ -6,9 +6,10 @@
 	<div class="tile-container scrollable-order-list">
 		<div
 			class="tile-bigbox"
-			ng-repeat="dish in model.selectedRestraunt.menu.dishes"
+			ng-repeat="dish in model.selectedRestaurant.menu.dishes"
 			ng-click="addClientDish(dish)">
-			<!--<img src="images/dishes/1.jpg" width="350rem"/>-->
+
+			<div>{{dish.count}}</div>
 			<img ng-src="http://lorempixel.com/350/200/food/{{dish.id}}" width="350rem"/>
 
 			<h2>{{dish.name}}</h2>

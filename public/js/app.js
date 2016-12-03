@@ -2,9 +2,9 @@ var app = angular.module('billApp', ['ngRoute']);
 
 app.config(function ($routeProvider, $locationProvider) {
     $routeProvider
-        .when("/restraunts",{
-            controller: 'RestrauntsController',
-            templateUrl: 'views/restraunts.html'
+        .when("/restaurants",{
+            controller: 'RestaurantsController',
+            templateUrl: 'views/restaurants.html'
         })
         .when("/new-order",{
             controller: 'NewOrderController',

@@ -5,10 +5,10 @@
 			<hr>
 			<div class="dropdown">
 				<button class="btn btn-default dropdown-toggle"
-						type="button" id="menu1" data-toggle="dropdown">{{model.selectedRestraunt.name || 'Choose' }}
+						type="button" id="menu1" data-toggle="dropdown">{{model.selectedRestaurant.name || 'Choose' }}
 					<span class="caret"></span></button>
 				<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-					<li ng-repeat="rest in model.restraunts" ng-click="setSelectedRestraunt(rest)">
+					<li ng-repeat="rest in model.restaurants" ng-click="setSelectedRestaurant(rest)">
 						<a href="#">{{rest.name}}</a>
 					</li>
 				</ul>
@@ -21,9 +21,9 @@
 				<button ng-disabled="model.newClient == ''"  ng-click="addClient()">Add Client</button>
 			</span>
 
-			<div ng-show="model.selectedRestraunt != undefined">
+			<div ng-show="model.selectedRestaurant != undefined">
 				Menu
-				<ul ng-repeat="dish in model.selectedRestraunt.menu.dishes">
+				<ul ng-repeat="dish in model.selectedRestaurant.menu.dishes">
 					<span>{{dish.name}} : {{dish.price || 1}}</span>
 				</ul>
 			</div>
@@ -46,7 +46,7 @@
 								type="button" id="menu2" data-toggle="dropdown">Choose
 							<span class="caret"></span></button>
 						<ul class="dropdown-menu" role="menu" aria-labelledby="menu2">
-							<li ng-repeat="dish in model.selectedRestraunt.menu.dishes">
+							<li ng-repeat="dish in model.selectedRestaurant.menu.dishes">
 								<a href="#" >{{dish.name}} : {{dish.price}}</a>
 							</li>
 						</ul>

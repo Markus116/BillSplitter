@@ -1,10 +1,10 @@
 angular.module('billApp')
-    .factory('Restraunt', function() {
-        function Restraunt(id, name, menu){
+    .factory('Restaurants', function() {
+        function Restaurants(id, name, menu){
             this.id = id;
             this.name = name;
             this.menu = menu;
         }
 
-        return Restraunt;
+        return Restaurants;
     });

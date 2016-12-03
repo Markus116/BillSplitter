@@ -1,5 +1,5 @@
 angular.module('billApp')
-    .factory("ClientsFactory", function (Dish,Client,Restraunt) {
+    .factory("ClientsFactory", function (Dish,Client,Restaurants) {
         var factory = {};
         //clients
         factory.orderId = 0;
@@ -21,8 +21,8 @@ angular.module('billApp')
         //clients
 
 
-        //restraunts
-        factory.restraunts = [
+        //restaurants
+        factory.restaurants = [
             {id:1, name: "Oliva", menu :{dishes:[
                 {id:1, name:'Fresh Squeezed Orange', price: 65},
                 {id:2, name:'Fruit Bowl', price: 23},
@@ -61,15 +61,16 @@ angular.module('billApp')
             ]}}
         ];
 
-        factory.selectedRestraunt = undefined;
-        factory.setSelectedRestraunt = function(rest){
-            if(factory.selectedRestraunt == undefined || factory.selectedRestraunt.id != rest.id){
-                console.log("setSelectedRestraunt");
-                factory.selectedRestraunt = rest;
+        factory.selectedRestaurant = undefined;
+        factory.setSelectedRestaurant = function(rest){
+            if(factory.selectedRestaurant == undefined || factory.selectedRestaurant.id != rest.id){
+                console.log("setSelectedRestaurant");
+                factory.selectedRestaurant = jQuery.extend(true, {}, rest);
+                angular.forEach(factory.selectedRestaurant.dishes, function(dish) {
+                    dish.count = 0;
+                });
             }
         };
-        //restraunts
-
 
         //dishes
         factory.addDish = function(user, dish){

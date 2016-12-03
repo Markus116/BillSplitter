@@ -2,8 +2,15 @@ angular.module("billApp")
     .controller('ClientOrderController', function ($scope, $routeParams, $location, ClientsFactory, HttpService, Dish) {
         $scope.model = ClientsFactory;
 
+        if (!$scope.model.currentClient) {
+            $location.path("/restaurants");
+            console.log('Navigate to restaurant selection');
+            return;
+        }
+
         $scope.addClientDish = function (dish) {
             var dishCopy = new Dish(dish.id, dish.name, dish.price);
+            dish.count++;
             $scope.model.currentClient.order.addDish(dishCopy);
         };
 

@@ -1,7 +1,13 @@
 angular.module("billApp")
     .controller('NewOrderController',
-        function ($scope,$location,ClientsFactory) {
+        function ($scope, $location, ClientsFactory) {
         $scope.model = ClientsFactory;
+
+        if (!$scope.model.currentClient) {
+            $location.path("/restaurants");
+            console.log('Navigate to restaurant selection');
+            return;
+        }
 
         $scope.createNewOrder = function(){
             var id = parseInt(Math.random() * 10000);

@@ -1,0 +1,8 @@
+<h1 class="ribbon-green">
+	<strong class="ribbon-content">We have found some restaurants near you, where you are?</strong>
+</h1>
+
+<div class="restaurant-list-item" ng-repeat="restaurant in model.restaurants"
+	ng-click="setSelectedRestaurant(restaurant)">
+	<a href="/new-order">{{restaurant.name}}</a>
+</div>
