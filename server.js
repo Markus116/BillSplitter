@@ -89,7 +89,7 @@ app.get("/getorder/:id",function(req, res) {
     res.status(200).send("REs");
 });
 
-var server = app.listen(config.get('port'), function () {
+var server = app.listen(process.env.PORT || config.get('port'), function () {
     var host = server.address().address;
     var port = server.address().port;
     console.log('Listening at http://%s:%s', host, port);
