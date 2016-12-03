@@ -24,40 +24,40 @@ angular.module('billApp')
         //restaurants
         factory.restaurants = [
             {id:1, name: "Oliva", menu :{dishes:[
-                {id:1, name:'Fresh Squeezed Orange', price: 65},
+                {id:1, name:'Fresh Squeezed', price: 65},
                 {id:2, name:'Fruit Bowl', price: 23},
                 {id:3, name:' Bread Basket', price: 31},
                 {id:4, name:'Buttermilk', price: 5},
-                {id:5, name:'Blueberry Pancakes', price: 85},
+                {id:5, name:'Blueberry Pan', price: 85},
                 {id:6, name:' Muffins', price: 25},
-                {id:5, name:'Sautéed Walnuts & Omelette', price: 123},
-                {id:6, name:'Pickled Cocoa & Mushroom Vegetables', price: 31},
-                {id:7, name:'Banana and White Chocolate Genoise', price: 11},
+                {id:5, name:'Omelette', price: 123},
+                {id:6, name:'Pickled Cocoa', price: 31},
+                {id:7, name:'Banana and White', price: 11},
             ]}},
             {id:2, name: "Mamamia", menu :{dishes:[
-                {id:1, name:'Stuffed Vanilla & Mint Venison', price: 43},
-                {id:2, name:'Tenderized Cinnamon Turkey', price: 28},
-                {id:3, name:'Pressure-Fried Sugar Crocodile', price: 53},
-                {id:4, name:'Stuffed Cucumber & Lime Cockles', price: 161},
-                {id:5, name:'Sautéed Walnuts & Omelette', price: 234},
-                {id:6, name:'Pickled Cocoa & Mushroom Vegetables', price: 310},
-                {id:7, name:'Banana and White Chocolate Genoise', price: 100},
+                {id:1, name:'Stuffed Vanilla', price: 43},
+                {id:2, name:'Tenderized Cinnamon', price: 28},
+                {id:3, name:'Sugar Crocodile', price: 53},
+                {id:4, name:'Stuffed Cucumber', price: 161},
+                {id:5, name:'Omelette', price: 234},
+                {id:6, name:'Mushroom Vegetables', price: 310},
+                {id:7, name:'Banana and White', price: 100},
                 {id:8, name:'Rum and Plum Soufflé', price: 210},
                 {id:9, name:'White Chocolate Wafer', price: 315},
                 {id:10, name:' Peanut Molten Cake', price: 43}
             ]
             }},
             {id:3, name: "Under Wonder",menu :{dishes:[
-                {id:1, name:'Fresh Squeezed Orange', price: 65},
+                {id:1, name:'Fresh Squeezed', price: 65},
                 {id:2, name:'Fruit Bowl', price: 23},
                 {id:3, name:' Bread Basket', price: 31},
                 {id:4, name:'Buttermilk', price: 5},
                 {id:5, name:'Blueberry Pancakes', price: 85},
-                {id:6, name:'Pickled Cocoa & Mushroom Vegetables', price: 310},
-                {id:7, name:'Banana and White Chocolate Genoise', price: 100},
-                {id:8, name:'Rum and Plum Soufflé', price: 210},
-                {id:9, name:'White Chocolate Wafer', price: 315},
-                {id:10, name:' Peanut Molten Cake', price: 43}
+                {id:6, name:'Mushroom Vegetables', price: 310},
+                {id:7, name:'Chocolate Genoise', price: 100},
+                {id:8, name:'Plum Soufflé', price: 210},
+                {id:9, name:'White Chocolate', price: 315},
+                {id:10, name:' Peanut Molten', price: 43}
             ]}}
         ];
 
