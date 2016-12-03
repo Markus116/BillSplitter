@@ -1,1 +1,31 @@
-AAAAAAAA
+<div>
+
+    <h1 class="ribbon-grey">
+        <strong class="ribbon-content">Summary dishes</strong>
+    </h1>
+
+    <div class="scrollable-order-list">
+        <div ng-repeat="client in model.clients">
+            <h1 ng-click="selectClient(client)">{{client.name}}</h1>
+
+            <div class="personal-order-item" ng-repeat="dish in client.order.dishes">
+                <span>{{dish.name}} : {{dish.price}} UAH </span>
+                <button class="list-item-remove" ng-click="removeClientDish(dish)"></button>
+            </div>
+
+            <div class="total-price">
+                <span class="left-aligned">Total</span>
+                <span class="right-aligned">{{client.order.total}} UAH</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-footer">
+        <div class="mi-button mi-button-line" ng-click="newClient()">New client</div>
+        <div class="mi-button mi-button-line" ng-click="approveOrder()">Done</div>
+        <div class="total-price">
+            <span class="left-aligned">Total</span>
+            <span class="right-aligned">{{getAggregatedTotal()}} UAH</span>
+        </div>
+    </div>
+</div>

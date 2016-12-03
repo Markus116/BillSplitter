@@ -18,7 +18,7 @@ app.config(function ($routeProvider, $locationProvider) {
             controller: 'MenuOrderController',
             templateUrl: 'views/personal-order.html'
         })
-        .when('/order:id',{
+        .when('/aggregated-order',{
             controller: 'MenuOrderController',
             templateUrl: 'views/aggregated-order.html'
         })

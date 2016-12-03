@@ -3,10 +3,10 @@ angular.module('billApp')
         var factory = {};
         //clients
         factory.orderId = 0;
-        var clientId = parseInt(Math.random()*10000);
+        var clientId = parseInt(Math.random() * 10000);
 
-
-        factory.currentClient = new Client(clientId,"User"+clientId);
+        factory.currentClient = new Client(clientId,"User" + clientId);
+        factory.clients = [factory.currentClient];
 
         /*factory.addClient = function () {
             //var client = {name:this.newClient, dishes:[], selectedDish:undefined};
