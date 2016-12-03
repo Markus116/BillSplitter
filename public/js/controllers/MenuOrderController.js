@@ -3,8 +3,8 @@ angular.module("billApp")
         $scope.model = ClientsFactory;
 
         if (!$scope.model.selectedRestaurant) {
-            $location.path("/restaurants");
             console.log('Navigate to restaurant selection');
+            $location.path("/restaurants");
             return;
         }
 
