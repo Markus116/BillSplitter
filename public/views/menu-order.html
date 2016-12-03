@@ -3,8 +3,26 @@
 		<strong class="ribbon-content">Main Dishes</strong>
 	</h1>
 
-	<span ng-repeat="dish in model.selectedRestraunt.menu.dishes"
-		ng-click="addClientDish(dish)">{{dish.name}} : {{dish.price}}UAH<br/></span>
+	<div class="tile-container">
+		<div
+			class="tile-bigbox"
+			ng-repeat="dish in model.selectedRestraunt.menu.dishes"
+			ng-click="addClientDish(dish)">
+			<!--<img src="images/dishes/1.jpg" width="350rem"/>-->
+			<img ng-src="http://lorempixel.com/350/200/food/{{dish.id}}" width="350rem"/>
+
+			<h2>{{dish.name}}</h2>
+			<h3>{{dish.price}} UAH</h3>
+		</div>
+	</div>
+
+	<!--<div class="tile-container">-->
+		<!--<div class="tile-bigbox">-->
+			<!--<img src="images/dishes/1.jpg" width="400rem">-->
+			<!--<h2>Some pretty good food</h2>-->
+			<!--<h3>500 UAH</h3>-->
+		<!--</div>-->
+	<!--</div>-->
 
 	<div class="section-footer">
 		<div class="mi-button" ng-click="goToPersonalOrder()">Go to order</div>
