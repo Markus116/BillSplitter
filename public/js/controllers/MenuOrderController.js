@@ -64,7 +64,7 @@ angular.module("billApp")
 
             var clientId = parseInt(Math.random() * 10000);
 
-            $scope.model.currentClient = new Client(clientId,"User" + clientId);
+            $scope.model.currentClient = new Client(clientId, $scope.model.CLIENT_NAMES.shift());
             $scope.model.clients.push($scope.model.currentClient);
             $location.path('/menu-order');
         };

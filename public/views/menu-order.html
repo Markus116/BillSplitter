@@ -9,7 +9,13 @@
 			ng-repeat="dish in model.selectedRestaurant.menu.dishes"
 			ng-click="addClientDish(dish)">
 
-			<div>{{dish.count}}</div>
+			<div class="selected-by-user">
+				<ul class="list-inline m-b-none m-l-none selected-by-user-ul">
+					<li ng-repeat="n in [] | range:dish.count">
+						<div class="home-miner-box"></div>
+					</li>
+				</ul>
+			</div>
 			<img ng-src="http://lorempixel.com/350/200/food/{{dish.id}}" width="350rem"/>
 
 			<h2>{{dish.name}}</h2>

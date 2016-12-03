@@ -1,11 +1,14 @@
 angular.module('billApp')
     .factory("ClientsFactory", function (Dish,Client,Restaurants) {
+
         var factory = {};
+        factory.CLIENT_NAMES = ['First Client', 'Second Client', 'Third Client', 'Forth Client', 'Fifth Client'];
+
         //clients
         factory.orderId = 0;
         var clientId = parseInt(Math.random() * 10000);
 
-        factory.currentClient = new Client(clientId,"User" + clientId);
+        factory.currentClient = new Client(clientId, factory.CLIENT_NAMES.shift());
         factory.clients = [factory.currentClient];
 
         /*factory.addClient = function () {
@@ -67,8 +70,6 @@ angular.module('billApp')
             factory.selectedRestaurant = jQuery.extend(true, {}, item);
             factory.selectedRestaurant.menu.dishes.forEach(function(dish) {
                 dish.count = 0;
-                console.log('Set dish');
-                console.log(dish);
             });
         };
 
