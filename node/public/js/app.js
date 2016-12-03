@@ -1,6 +1,6 @@
 var app = angular.module('billApp', ['ngRoute']);
 
-app.config(function ($routeProvider) {
+app.config(function ($routeProvider, $locationProvider) {
     $routeProvider
         .when("/restraunts",{
             controller: 'RestrauntsController',
@@ -33,4 +33,6 @@ app.config(function ($routeProvider) {
         .otherwise({
             redirectTo: '/hello-page'
         });
+
+        $locationProvider.html5Mode(true);
 });
