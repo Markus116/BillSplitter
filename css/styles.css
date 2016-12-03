@@ -337,6 +337,97 @@ body {
     background: rgb(230, 230, 230);
 }
 
+/* grey ribbon */
+.ribbon-grey {
+    font-size: 3rem !important;
+    width: 100%;
+
+    position: relative;
+    background: #807e7e;
+    color: #fff;
+    text-align: center;
+    padding: 1em 2em;
+}
+.ribbon-grey:before, .ribbon-grey:after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -1em;
+    border: 1.5em solid #807e7e;
+    z-index: -1;
+}
+.ribbon-grey:before {
+    left: -2em;
+    border-right-width: 1.5em;
+    border-left-color: transparent;
+}
+.ribbon-grey:after {
+    right: -2em;
+    border-left-width: 1.5em;
+    border-right-color: transparent;
+}
+.ribbon-grey .ribbon-content:before, .ribbon-grey .ribbon-content:after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: #424242 transparent transparent transparent;
+    bottom: -1em;
+}
+.ribbon-grey .ribbon-content:before {
+    left: 0;
+    border-width: 1em 0 0 1em;
+}
+.ribbon-grey .ribbon-content:after {
+    right: 0;
+    border-width: 1em 1em 0 0;
+}
+
+/* green ribbon */
+.ribbon-green {
+    font-size: 3rem !important;
+    width: 100%;
+
+    position: relative;
+    background: #468847;
+    color: #fff;
+    text-align: center;
+    padding: 1em 2em;
+}
+.ribbon-green:before, .ribbon-green:after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -1em;
+    border: 1.5em solid #468847;
+    z-index: -1;
+}
+.ribbon-green:before {
+    left: -2em;
+    border-right-width: 1.5em;
+    border-left-color: transparent;
+}
+.ribbon-green:after {
+    right: -2em;
+    border-left-width: 1.5em;
+    border-right-color: transparent;
+}
+.ribbon-green .ribbon-content:before, .ribbon-green .ribbon-content:after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: #204420 transparent transparent transparent;
+    bottom: -1em;
+}
+.ribbon-green .ribbon-content:before {
+    left: 0;
+    border-width: 1em 0 0 1em;
+}
+.ribbon-green .ribbon-content:after {
+    right: 0;
+    border-width: 1em 1em 0 0;
+}
 
 
 /* velvet ribbon */
