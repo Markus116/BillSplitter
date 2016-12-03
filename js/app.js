@@ -22,7 +22,11 @@ app.config(function ($routeProvider) {
             controller: 'ClientOrderController',
             templateUrl: 'views/aggregated-order.html'
         })
+        .when('/hello-page',{
+            controller: 'HelloPageController',
+            templateUrl: 'views/hello-page.html'
+        })
         .otherwise({
-            redirectTo: '/restraunts'
+            redirectTo: '/hello-page'
         });
 });

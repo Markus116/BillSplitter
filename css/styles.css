@@ -348,6 +348,7 @@ body {
     color: #fff;
     text-align: center;
     padding: 1em 2em;
+    margin-bottom: 5rem;
 }
 .ribbon-grey:before, .ribbon-grey:after {
     content: "";
@@ -388,7 +389,7 @@ body {
 .ribbon-green {
     font-size: 3rem !important;
     width: 100%;
-
+    margin-bottom: 5rem;
     position: relative;
     background: #468847;
     color: #fff;
@@ -435,7 +436,7 @@ body {
 .ribbon-velvet {
     font-size: 3rem !important;
     width: 100%;
-
+    margin-bottom: 5rem;
     position: relative;
     background: #8e4588;
     color: #fff;
@@ -482,7 +483,7 @@ body {
 .ribbon {
     font-size: 3rem !important;
     width: 100%;
-
+    margin-bottom: 5rem;
     position: relative;
     background: #bf0000;
     color: #fff;
@@ -549,7 +550,7 @@ body {
 
 .scrollable-order-list {
     overflow-y: scroll;
-    max-height: 50rem;
+    max-height: 45rem;
 }
 
 .list-item-remove {
