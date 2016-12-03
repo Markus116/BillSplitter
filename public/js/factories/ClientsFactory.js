@@ -23,8 +23,30 @@ angular.module('billApp')
 
         //restraunts
         factory.restraunts = [
-            {id:1, name: "Oliva", menu :{dishes:[{id:1, name:'Oliva dish1', price: 1},{id:2, name:'Oliva dish2', price: 2},{id:3, name:' Olivadish3', price: 3}]}},
-            {id:2, name: "Mamamia", menu :{dishes:[{id:1, name:'Mamamia dish1', price: 1},{id:2, name:'Mamamia dish2', price: 2},{id:3, name:' Mamamia dish3', price: 3}]}},
+            {id:1, name: "Oliva", menu :{dishes:[
+                {id:1, name:'Fresh Squeezed Orange', price: 6.50},
+                {id:2, name:'Fruit Bowl', price: 2.30},
+                {id:3, name:' Bread Basket', price: 3.10},
+                {id:4, name:'Buttermilk', price: 0.50},
+                {id:5, name:'Blueberry Pancakes', price: 8.50},
+                {id:6, name:' Muffins', price: 2.50},
+                {id:5, name:'Sautéed Walnuts & Omelette', price: 12.30},
+                {id:6, name:'Pickled Cocoa & Mushroom Vegetables', price: 3.10},
+                {id:7, name:'Banana and White Chocolate Genoise', price: 1.10},
+            ]}},
+            {id:2, name: "Mamamia", menu :{dishes:[
+                {id:1, name:'Stuffed Vanilla & Mint Venison', price: 1},
+                {id:2, name:'Tenderized Cinnamon Turkey', price: 2},
+                {id:3, name:'Pressure-Fried Sugar Crocodile', price: 3},
+                {id:4, name:'Stuffed Cucumber & Lime Cockles', price: 1},
+                {id:5, name:'Sautéed Walnuts & Omelette', price: 2},
+                {id:6, name:'Pickled Cocoa & Mushroom Vegetables', price: 3},
+                {id:7, name:'Banana and White Chocolate Genoise', price: 1},
+                {id:8, name:'Rum and Plum Soufflé', price: 2},
+                {id:9, name:'White Chocolate Wafer', price: 3},
+                {id:10, name:' Peanut Molten Cake', price: 3}
+            ]
+            }},
             {id:3, name: "Under Wonder",menu :{dishes:[{id:1, name:'Under Wonder dish1', price: 1},{id:2, name:'Under Wonder dish2', price: 2},{id:3, name:' Under Wonder dish3', price: 3}]}}
         ];
 
