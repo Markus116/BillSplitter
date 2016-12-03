@@ -62,14 +62,14 @@ angular.module('billApp')
         ];
 
         factory.selectedRestaurant = undefined;
-        factory.setSelectedRestaurant = function(rest){
-            if(factory.selectedRestaurant == undefined || factory.selectedRestaurant.id != rest.id){
-                console.log("setSelectedRestaurant");
-                factory.selectedRestaurant = jQuery.extend(true, {}, rest);
-                angular.forEach(factory.selectedRestaurant.dishes, function(dish) {
-                    dish.count = 0;
-                });
-            }
+        factory.setSelectedRestaurant = function(item){
+            console.log("setSelectedRestaurant1");
+            factory.selectedRestaurant = jQuery.extend(true, {}, item);
+            factory.selectedRestaurant.menu.dishes.forEach(function(dish) {
+                dish.count = 0;
+                console.log('Set dish');
+                console.log(dish);
+            });
         };
 
         //dishes
