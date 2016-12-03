@@ -8,6 +8,6 @@
 
  * `npm install`
 
- * `node server.js
+ * `node server.js`
 
  * Visit http://localhost:3000
