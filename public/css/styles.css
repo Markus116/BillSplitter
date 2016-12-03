@@ -328,7 +328,7 @@ body {
 .mi-button {
     padding: 2rem;
     min-width: 40rem;
-    height:8rem;
+    /*height:8rem;*/
     background: rgb(220, 220, 220);
     display: inline-block;
     margin: 1rem;

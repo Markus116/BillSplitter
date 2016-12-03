@@ -1,15 +1,21 @@
 {
-  "name": "bill-splitter",
+  "name": "billsplitter",
   "version": "1.0.0",
-  "description": "bill splitter",
-  "main": "app.js",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "Trembit",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.5.9",
-    "angular-route": "^1.5.9"
+    "body-parser": "^1.15.2",
+    "config": "^1.24.0",
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "underscore": "^1.8.3"
   }
 }

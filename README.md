@@ -4,8 +4,6 @@
 
  * Have NodeJS installed
 
- * `cd node`
-
  * `npm install`
 
  * `node server.js`

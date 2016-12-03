@@ -22,6 +22,25 @@ try {
     }
 }
 
+app.use(function (req, res, next) {
+    var filePath = 'public/views' + req.path + '.html';
+    var exists = path.extname(filePath);
+    console.log("Requesting " + req.path + ' ' + filePath + ' ' + exists);
+
+    if (path.extname(req.path).length > 0 || path.extname('public/views' + req.path + '.html').length > 0 ) {
+        // normal static file request
+        next();
+    } else if (path.extname(req.path).length > 0) {
+        // normal static file request
+        next();
+    }
+    else {
+        // should force return `index.html` for angular.js
+        req.url = '/index.html';
+        next();
+    }
+});
+
 app.post("/addorder/:orderId/client/:clientId",function (request, response) {
     console.log("Got response: " + response.statusCode);
     var orderId = request.params.orderId;
