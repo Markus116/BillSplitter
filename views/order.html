@@ -17,6 +17,12 @@
 
 	<hr>
 
-	Total : {{model.currentClient.order.total}}
-	<button class="mi-button" ng-click="approveOrder()">Approve</button>
+	<div class="section-footer">
+		<div class="mi-button" ng-click="approveOrder()">Approve</div>
+		<div class="total-price">
+			<span class="left-aligned">Total</span>
+			<span class="right-aligned">{{model.currentClient.order.total}} UAH</span>
+		</div>
+	</div>
+
 </div>

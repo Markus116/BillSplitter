@@ -317,6 +317,7 @@ body {
     border-radius: 5px;
     box-shadow: 3px 3px 3px rgba(0,0,0,0.15);
     border: 0px;
+    position: relative;
 }
 
 .mi-button-group {
@@ -336,6 +337,56 @@ body {
     background: rgb(230, 230, 230);
 }
 
+
+
+/* velvet ribbon */
+.ribbon-velvet {
+    font-size: 3rem !important;
+    width: 100%;
+
+    position: relative;
+    background: #8e4588;
+    color: #fff;
+    text-align: center;
+    padding: 1em 2em;
+}
+.ribbon-velvet:before, .ribbon-velvet:after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -1em;
+    border: 1.5em solid #8e4588;
+    z-index: -1;
+}
+.ribbon-velvet:before {
+    left: -2em;
+    border-right-width: 1.5em;
+    border-left-color: transparent;
+}
+.ribbon-velvet:after {
+    right: -2em;
+    border-left-width: 1.5em;
+    border-right-color: transparent;
+}
+.ribbon-velvet .ribbon-content:before, .ribbon-velvet .ribbon-content:after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: #804f7c transparent transparent transparent;
+    bottom: -1em;
+}
+.ribbon-velvet .ribbon-content:before {
+    left: 0;
+    border-width: 1em 0 0 1em;
+}
+.ribbon-velvet .ribbon-content:after {
+    right: 0;
+    border-width: 1em 1em 0 0;
+}
+
+
+/* red ribbon */
 .ribbon {
     font-size: 3rem !important;
     width: 100%;
@@ -379,4 +430,23 @@ body {
 .ribbon .ribbon-content:after {
     right: 0;
     border-width: 1em 1em 0 0;
+}
+
+.total-price {
+    border-top: 0.3rem solid rgb(84, 84, 84);
+}
+
+.total-price span.left-aligned {
+    float: left;
+}
+
+.total-price span.right-aligned {
+    float: right;
+}
+
+.section-footer {
+    border-top: 0.3rem solid rgb(84, 84, 84);
+    width: 90%;
+    position: absolute;
+    bottom: 1.5rem;
 }
