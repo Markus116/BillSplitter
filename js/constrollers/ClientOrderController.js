@@ -1,7 +1,7 @@
 angular.module("billApp")
-    .controller('OrderController', function ($scope, $routeParams, ClientsFactory, Dish) {
+    .controller('ClientOrderController', function ($scope, $routeParams, $location, ClientsFactory, Dish) {
         $scope.model = ClientsFactory;
-        $scope.model.orderId = $routeParams.order;
+        $scope.model.orderId = $routeParams.id;
 
         $scope.addClientDish = function (dish) {
             var dishCopy = new Dish(dish.id, dish.name, dish.price);
@@ -12,7 +12,11 @@ angular.module("billApp")
             $scope.model.currentClient.order.removeDish(dish);
         };
 
+        $scope.goToPersonalOrder = function(){
+            $location.path("/personal-order");
+        };
+
         $scope.approveOrder = function(){
-            console.log("approve order");
+            $location.path("/order:"+$scope.model.orderId );
         };
     });

@@ -1,5 +1,5 @@
 angular.module("billApp")
-    .controller('OrdersController',
+    .controller('NewOrderController',
         function ($scope,$location,ClientsFactory) {
         $scope.model = ClientsFactory;
 
@@ -13,6 +13,7 @@ angular.module("billApp")
         };
 
         function navigateToOrder(id){
-            $location.path("/order:" + id);
+            $scope.model.orderId = id;
+            $location.path("/menu-order");
         }
     });

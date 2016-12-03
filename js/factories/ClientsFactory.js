@@ -31,6 +31,7 @@ angular.module('billApp')
         factory.selectedRestraunt = undefined;
         factory.setSelectedRestraunt = function(rest){
             if(factory.selectedRestraunt == undefined || factory.selectedRestraunt.id != rest.id){
+                console.log("setSelectedRestraunt");
                 factory.selectedRestraunt = rest;
             }
         };

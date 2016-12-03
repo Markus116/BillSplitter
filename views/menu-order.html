@@ -1,0 +1,17 @@
+<div>
+	<h1 class="ribbon">
+		<strong class="ribbon-content">Main Dishes</strong>
+	</h1>
+
+	<span ng-repeat="dish in model.selectedRestraunt.menu.dishes"
+		ng-click="addClientDish(dish)">{{dish.name}} : {{dish.price}}UAH<br/></span>
+
+	<div class="section-footer">
+		<div class="mi-button" ng-click="goToPersonalOrder()">Go to order</div>
+		<div class="total-price">
+			<span class="left-aligned">Total</span>
+			<span class="right-aligned">{{model.currentClient.order.total}} UAH</span>
+		</div>
+	</div>
+
+</div>

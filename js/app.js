@@ -6,13 +6,21 @@ app.config(function ($routeProvider) {
             controller: 'RestrauntsController',
             templateUrl: 'views/restraunts.html'
         })
-        .when("/orders",{
-            controller: 'OrdersController',
-            templateUrl: 'views/orders.html'
+        .when("/new-order",{
+            controller: 'NewOrderController',
+            templateUrl: 'views/new-order.html'
+        })
+        .when('/menu-order',{
+            controller: 'ClientOrderController',
+            templateUrl: 'views/menu-order.html'
+        })
+        .when('/personal-order',{
+            controller: 'ClientOrderController',
+            templateUrl: 'views/personal-order.html'
         })
         .when('/order:id',{
-            controller: 'OrderController',
-            templateUrl: 'views/order.html'
+            controller: 'ClientOrderController',
+            templateUrl: 'views/aggregated-order.html'
         })
         .otherwise({
             redirectTo: '/restraunts'
