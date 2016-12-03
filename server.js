@@ -14,14 +14,14 @@ app.use(bodyParser.json());
 //app.use('/orders',express.static('public'));
 app.use(cors());
 
-try {
-    console.log("dataPath " + config.get('dataPath'));
-    fs.mkdirSync(config.get('dataPath'));
-} catch (ex) {
-    if (ex.code != 'EEXIST') {
-        throw ex;
-    }
-}
+//try {
+//    console.log("dataPath " + config.get('dataPath'));
+//    fs.mkdirSync(config.get('dataPath'));
+//} catch (ex) {
+//    if (ex.code != 'EEXIST') {
+//        throw ex;
+//    }
+//}
 
 app.use(function (req, res, next) {
     var filePath = 'public/views' + req.path + '.html';
