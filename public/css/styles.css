@@ -640,3 +640,5 @@ body {
     text-align: left;
     padding: 1rem;
 }
+
+#map { height: 100%; }
