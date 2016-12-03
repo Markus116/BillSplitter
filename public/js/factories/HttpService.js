@@ -2,7 +2,7 @@ angular.module("billApp")
     .factory("HttpService",function ($http) {
         return {
             saveSubOrder:function (orderId,clientId,data) {
-                var url = "http://localhost:3030/addorder/"+orderId+"/client/"+clientId;
+                var url = "/addorder/"+orderId+"/client/"+clientId;
 
                /* return $http({
                     method: 'POST',
@@ -15,7 +15,7 @@ angular.module("billApp")
             },
 
             getOrder:function (orderId) {
-                var url = "http://localhost:3030/getorder/" + orderId;
+                var url = "/getorder/" + orderId;
                 return $http.get(url);
             }
         }
