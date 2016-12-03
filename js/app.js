@@ -26,6 +26,10 @@ app.config(function ($routeProvider) {
             controller: 'HelloPageController',
             templateUrl: 'views/hello-page.html'
         })
+        .when('/search-page',{
+            controller: 'SearchPageController',
+            templateUrl: 'views/search-page.html'
+        })
         .otherwise({
             redirectTo: '/hello-page'
         });
