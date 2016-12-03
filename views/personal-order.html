@@ -4,9 +4,11 @@
 		<strong class="ribbon-content">Selected dishes</strong>
 	</h1>
 
-	<div ng-repeat="dish in model.currentClient.order.dishes">
-		<span>{{dish.name}} : {{dish.price}}UAH </span>
-		<button ng-click="removeClientDish(dish)">Remove</button>
+	<div class="scrollable-order-list">
+		<div class="personal-order-item" ng-repeat="dish in model.currentClient.order.dishes">
+			<span>{{dish.name}} : {{dish.price}}UAH </span>
+			<button class="list-item-remove" ng-click="removeClientDish(dish)"></button>
+		</div>
 	</div>
 
 	<div class="section-footer">
