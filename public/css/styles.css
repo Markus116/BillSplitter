@@ -600,6 +600,7 @@ body {
     width: 90px;
     /*height: 90px;*/
     margin: 10px;
+    position: relative;
 }
 
 .tile-bigbox {
@@ -616,10 +617,6 @@ body {
 
 .selected-by-user {
     position: absolute;
-    width: 3rem;
-    height: 3rem;
-    background: rgb(54, 185, 212);
-    border-radius: 3rem;
 }
 
 .selected-by-user-ul {
@@ -627,7 +624,12 @@ body {
 }
 
 .selected-by-user-ul>li {
-    padding-right:3rem;
+    padding-right:2rem;
+    display: table-cell;
+    width: 2rem;
+    height: 2rem;
+    background: rgb(54, 185, 212);
+    border-radius: 2rem;
 }
 
 .user-name {
