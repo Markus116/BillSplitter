@@ -1,7 +1,6 @@
 angular.module("billApp")
-    .controller('ClientOrderController', function ($scope, $routeParams, $location, ClientsFactory, Dish) {
+    .controller('ClientOrderController', function ($scope, $routeParams, $location, ClientsFactory, HttpService, Dish) {
         $scope.model = ClientsFactory;
-        $scope.model.orderId = $routeParams.id;
 
         $scope.addClientDish = function (dish) {
             var dishCopy = new Dish(dish.id, dish.name, dish.price);
@@ -16,7 +15,35 @@ angular.module("billApp")
             $location.path("/personal-order");
         };
 
+        $scope.updateAggregatedOrder = function(orderId){
+            HttpService.getOrder(orderId)
+                .success(function(response) {
+                    console.log("RES",response);
+                })
+                .error(function(data, status) {
+                    console.log("ERROR",data,status);
+                })
+                .catch(function(error) {
+                    console.log("ERROR");
+                });
+        }
+
         $scope.approveOrder = function(){
-            $location.path("/order:"+$scope.model.orderId );
-        };
+            var json = angular.toJson($scope.model.currentClient.order);
+            console.log($scope.model.orderId,json);
+            HttpService.saveSubOrder($scope.model.orderId,$scope.model.currentClient.id,{json:json})
+                .success(function(response) {
+                    console.log("RES",response);
+                    //todo save results to model and go to aggregated order view
+                    //todo use GroupOrder
+                    //$location.path("/order:"+$scope.model.orderId );
+                })
+                .error(function(data, status) {
+                    console.log("ERROR",data,status);
+                })
+                .catch(function(error) {
+                    console.log("ERROR",error);
+                });
+
+        }
     });
