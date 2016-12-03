@@ -1,7 +1,8 @@
 angular.module('billApp')
     .factory('Order', function(Dish) {
-        function Order(clientId){
+        function Order(clientId,clientName){
             this.clientId = clientId;
+            this.clientName = clientName || "Client "+clientId;
             this.dishes = [];
             this.total = 0;
 
