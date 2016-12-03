@@ -1,4 +1,4 @@
 {
-  "port": 3030,
-  "dataPath":"C:/Users/YuraGPC/WebstormProjects/BillSplitter/node/orders/"
+  "port": 3000,
+  "dataPath":"../orders/"
 }

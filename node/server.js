@@ -9,7 +9,8 @@ var utils = require("./utils");
 
 var app = express();
 app.use(bodyParser.json());
-app.use('/orders',express.static('orders'));
+app.use(express.static('public'));
+//app.use('/orders',express.static('public'));
 app.use(cors());
 
 try {
