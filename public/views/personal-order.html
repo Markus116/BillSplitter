@@ -6,15 +6,15 @@
 
 	<div class="scrollable-order-list">
 		<div class="personal-order-item" ng-repeat="dish in model.currentClient.order.dishes">
-			<span>{{dish.name}} : {{dish.price}}UAH </span>
+			<span>{{dish.name}} : {{dish.price}} UAH </span>
 			<button class="list-item-remove" ng-click="removeClientDish(dish)"></button>
 		</div>
 	</div>
 
 	<div class="section-footer">
-		<button class="mi-button" ng-click="approveOrder()">Approve</button>
+		<div class="mi-button" ng-click="approveOrder()">Approve</div>
 		<div class="total-price">
-			<span class="left-aligned">Total</span>
+			<span class="left-aligned">Total for {{model.currentClient.name}}</span>
 			<span class="right-aligned">{{model.currentClient.order.total}} UAH</span>
 		</div>
 	</div>

@@ -335,12 +335,18 @@ body {
 
 .mi-button {
     padding: 2rem;
-    min-width: 40rem;
+    min-width: 40px;
     /*height:8rem;*/
     background: rgb(220, 220, 220);
-    display: inline-block;
+    /*display: inline-block;*/
     margin: 1rem;
 }
+
+.mi-button-line {
+    float: left;
+}
+
+
 
 .mi-button:hover {
     background: rgb(230, 230, 230);
