@@ -29,6 +29,7 @@ angular.module("billApp")
         }
 
         $scope.approveOrder = function(){
+            console.log('approveOrder');
             var json = angular.toJson($scope.model.currentClient.order);
             console.log($scope.model.orderId,json);
             HttpService.saveSubOrder($scope.model.orderId,$scope.model.currentClient.id,{json:json})
