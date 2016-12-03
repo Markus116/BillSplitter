@@ -6,10 +6,11 @@ var cors = require('cors');
 var fs = require('fs');
 var express = require('express');
 var utils = require("./utils");
+var fs = require('fs');
 
 var app = express();
 app.use(bodyParser.json());
-app.use(express.static('public'));
+
 //app.use('/orders',express.static('public'));
 app.use(cors());
 
@@ -25,21 +26,21 @@ try {
 app.use(function (req, res, next) {
     var filePath = 'public/views' + req.path + '.html';
     var exists = path.extname(filePath);
-    console.log("Requesting " + req.path + ' ' + filePath + ' ' + exists);
+    console.log("Requesting " + req.path + ' ' + filePath + ' exists:' + exists + ', path:' + path);
 
-    if (path.extname(req.path).length > 0 || path.extname('public/views' + req.path + '.html').length > 0 ) {
-        // normal static file request
-        next();
-    } else if (path.extname(req.path).length > 0) {
-        // normal static file request
-        next();
-    }
-    else {
+    if (fs.existsSync(filePath)) {
+        console.log('Force return index.html');
         // should force return `index.html` for angular.js
         req.url = '/index.html';
         next();
+    } else {
+        // Normal static resource
+        next();
     }
 });
+
+/** STATIC ASSETS **/
+app.use(express.static('public'));
 
 app.post("/addorder/:orderId/client/:clientId",function (request, response) {
     console.log("Got response: " + response.statusCode);
