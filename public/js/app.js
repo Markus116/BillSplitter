@@ -11,15 +11,15 @@ app.config(function ($routeProvider, $locationProvider) {
             templateUrl: 'views/new-order.html'
         })
         .when('/menu-order',{
-            controller: 'ClientOrderController',
+            controller: 'MenuOrderController',
             templateUrl: 'views/menu-order.html'
         })
         .when('/personal-order',{
-            controller: 'ClientOrderController',
+            controller: 'MenuOrderController',
             templateUrl: 'views/personal-order.html'
         })
         .when('/order:id',{
-            controller: 'ClientOrderController',
+            controller: 'MenuOrderController',
             templateUrl: 'views/aggregated-order.html'
         })
         .when('/hello-page',{

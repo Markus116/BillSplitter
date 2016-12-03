@@ -1,10 +1,10 @@
 angular.module("billApp")
-    .controller('ClientOrderController', function ($scope, $routeParams, $location, ClientsFactory, HttpService, Dish) {
+    .controller('MenuOrderController', function ($scope, $routeParams, $location, ClientsFactory, HttpService, Dish) {
         $scope.model = ClientsFactory;
 
-        if (!$scope.model.currentClient) {
-            $location.path("/restaurants");
+        if (!$scope.model.selectedRestaurant) {
             console.log('Navigate to restaurant selection');
+            $location.path("/restaurants");
             return;
         }
 
